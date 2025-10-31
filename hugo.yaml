@@ -3,6 +3,10 @@ languageCode: en-us
 title: Justin Ryan Chambers
 theme: hextra
 
+caches:
+  images:
+    dir: :cacheDir/images
+
 enableRobotsTXT: true
 
 outputs:
