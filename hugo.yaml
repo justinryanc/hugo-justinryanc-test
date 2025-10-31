@@ -1,0 +1,129 @@
+baseURL: /
+languageCode: en-us
+title: Justin Ryan Chambers
+theme: hextra
+
+enableRobotsTXT: true
+
+outputs:
+  home: [html, llms]
+  page: [html]
+  section: [html, rss]
+
+params:
+  description: IT Professional and Photographer
+
+  externalLinkDecoration: true
+
+  #banner:
+  #  key: 'announcement-v0.11'
+  #  message: |
+  #    Hextra **v0.11** is here! 🎉 Discover [what's new]({{% ref "blog/v0.11" %}})
+
+  navbar:
+    displayTitle: true
+    displayLogo: true
+    logo:
+      path: /logo.png
+      dark: /logo.png
+      # width: 40
+      # height: 20
+      # link: /
+    width: wide
+
+  theme:
+    # light | dark | system
+    default: dark
+    displayToggle: true
+
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: true
+    width: normal
+
+  # Display the last modification date
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+
+  # Search
+  # flexsearch is enabled by default
+  search:
+    enable: true
+    type: flexsearch
+
+    flexsearch:
+      # index page by: content | summary | heading | title
+      index: content
+      # full | forward | reverse | strict
+      # https://github.com/nextapps-de/flexsearch/#tokenizer-prefix-search
+      tokenize: forward
+
+  blog:
+    list:
+      displayTags: true
+      # date | lastmod | publishDate | title | weight
+      sortBy: date
+      sortOrder: desc # or "asc"
+      # Pagination
+      pagerSize: 20
+
+    article:
+      displayPagination: true
+
+  toc:
+    displayTags: true
+
+  highlight:
+    copy:
+      enable: true
+      # hover | always
+      display: hover
+
+  page:
+    # full (100%), wide (90rem), normal (80rem)
+    width: normal
+    # tabs:
+    #   sync: true
+
+  comments:
+    enable: false
+    type: giscus
+
+    # https://giscus.app/
+    #giscus:
+    #  repo: imfing/hextra
+    #  repoId: R_kgDOJ9fJag
+    #  category: General
+    #  categoryId: DIC_kwDOJ9fJas4CY7gW
+      # mapping: pathname
+      # strict: 0
+      # reactionsEnabled: 1
+      # emitMetadata: 0
+      # inputPosition: top
+      # lang: en
+      # theme: noborder_dark
+    
+menu:
+  main:
+    - name: About
+      pageRef: /about
+      weight: 1
+    - name: Portfolio
+      pageRef: /portfolio
+      weight: 2
+    - name: Resume
+      pageRef: /resume
+      weight: 3
+    - name: Search
+      weight: 4
+      params:
+        type: search
+    - name: LinkedIn
+      weight: 5
+      url: "https://www.linkedin.com/in/justinryanc"
+      params:
+        icon: linkedin
+    - name: Flickr
+      weight: 6
+      url: "https://www.flickr.com/people/chambersjr"
